@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#mybutton {
+  margin: auto;
+  font-size: x-large;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  z-index: 2;
+  position: absolute;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    font-size 0.2s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+#mybutton:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-size: xx-large;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    font-size 0.2s ease-in-out;
+}
+
+#bg {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+}
+
+#recording {
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  z-index: 3;
+  position: fixed; /* or position: relative; */
+  top: 20px; /* Adjust the top position as needed */
+  left: 20px; /* Adjust the left position as needed */
+  animation: pulse 2s infinite;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.display {
+  opacity: 1;
+}
+#instructions {
+  /* color: white; */
+  font-size: x-large;
+  color: aqua;
+  position: absolute;
+  top: 53%;
+  margin: auto;
+  z-index: 4;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5); /* La taille maximale que vous souhaitez atteindre */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes opp {
+  0% {
+    transform: opacity(1);
+  }
+  50% {
+    transform: opacity(0); /* La taille maximale que vous souhaitez atteindre */
+  }
+  100% {
+    transform: opacity(1);
+  }
+}
