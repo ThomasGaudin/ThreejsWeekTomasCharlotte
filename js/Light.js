@@ -124,7 +124,7 @@ export default class Light {
     this.scene.add(this.spotLight10);
     //helper
     this.spotLightHelper = new THREE.SpotLightHelper(this.spotLight10);
-    this.scene.add(this.spotLightHelper10);
+    //this.scene.add(this.spotLightHelper10);
 
     //8
     this.spotLight8 = new THREE.SpotLight("#FFFFFF", 5000, 0, Math.PI / 3, 3);
